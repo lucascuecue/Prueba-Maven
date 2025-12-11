@@ -25,6 +25,27 @@ public class Persona {
         this.age = age;
     }
 
+    // Métodos
+
+    // Factory method
+    public static Persona createPersonaFromDelimitedString(String delimitedString){
+        if (delimitedString==null){
+            throw new IllegalArgumentException("No es válido");
+        }
+
+        String partes[] =delimitedString.split(",");
+        if(partes.length!=4){
+            throw new IllegalArgumentException("Argumentos inválidos");
+        }
+
+        try {
+            int age = Integer.parseInt(partes[3]);
+            return new Persona(partes[0],partes[1], partes[2],age);
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Argumentos inválidos");
+        }
+    }
+
     // Getters
 
     /**

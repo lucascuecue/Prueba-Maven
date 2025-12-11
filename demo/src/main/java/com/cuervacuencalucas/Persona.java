@@ -1,13 +1,23 @@
 package com.cuervacuencalucas;
 
+/**
+ * Clase persona con 4 atributos
+ */
 public class Persona {
     private String name;
     private String surname;
     private String email;
     private int age;
 
-    // Constructor
+    // Constructores
 
+    /**
+     * Constructor de persona con parámetros
+     * @param name nombre
+     * @param surname apellidos
+     * @param email E-Mail
+     * @param age edad
+     */
     public Persona (String name, String surname, String email, int age){
         this.name = name;
         this.surname = surname;
@@ -16,6 +26,11 @@ public class Persona {
     }
 
     // Getters
+
+    /**
+     * getter de la edad
+     * @return edad
+     */
     public int getAge() {
         return age;
     }
@@ -33,7 +48,6 @@ public class Persona {
     }
 
     // Setters
-
     public void setAge(int age) {
         this.age = age;
     }
